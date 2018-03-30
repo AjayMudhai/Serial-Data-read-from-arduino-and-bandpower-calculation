@@ -72,7 +72,6 @@ def nextpow2(i):
 
 samples = 0;
 
-i=0;
 
 with open('serialdata.csv', 'w' ) as f:
     fieldnames = ['time', 'ch1d','ch2d']
@@ -93,7 +92,7 @@ with open('serialdata.csv', 'w' ) as f:
         ch1Array.append(ch1)
         ch2Array.append(ch2)
         print i
-        i=i+1;
+        samples=samples+1;
         end=time.time();
         tm=float(end-start)
         writer.writerow({'time':tm, 'ch1d':ch1})
